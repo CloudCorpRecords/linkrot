@@ -1,0 +1,41 @@
+{
+  "bin": {
+    "linkrot": "dist/cli.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1",
+    "zod": "^3"
+  },
+  "description": "Docs link checker that separates failure kinds: relative links verified against the filesystem, external links classified as dead, moved (redirect), bot-blocked (401/403/429), or healthy, so a 403 from a bot wall is never reported as a dead link.",
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "server.json"
+  ],
+  "homepage": "https://github.com/CloudCorpRecords/linkrot#readme",
+  "license": "MIT",
+  "mcpName": "io.github.CloudCorpRecords/linkrot",
+  "name": "@reneturcios/linkrot",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCorpRecords/linkrot.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
